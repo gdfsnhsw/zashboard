@@ -1,0 +1,67 @@
+@utility base-container {
+  @apply bg-base-100 overflow-hidden rounded-xl shadow-xs;
+}
+
+@utility card {
+  @apply bg-base-100 rounded-xl shadow-xs;
+  .card-body {
+    @apply p-4;
+  }
+}
+
+@utility collapse {
+  @apply bg-base-100 rounded-xl shadow-xs;
+}
+
+.collapse.transparent-collapse {
+  @apply bg-transparent! shadow-none! backdrop-blur-none!;
+}
+
+.base-container:not(.virtual-scroller) .scroller-item + .scroller-item {
+  @apply border-base-200/80 border-t;
+}
+
+@utility badge {
+  @apply bg-base-200/80;
+}
+
+@utility select {
+  @apply w-auto;
+}
+
+@utility btn {
+  @apply border-none;
+}
+
+@utility tabs {
+  .tab {
+    @apply px-2;
+  }
+  .tab.tab-active {
+    @apply bg-primary text-primary-content;
+  }
+}
+
+@utility tab {
+  @apply max-md:min-w-24;
+}
+
+@utility table {
+  & tr,
+  & th,
+  & td {
+    @apply border-0;
+  }
+  @apply border-separate border-spacing-0;
+}
+
+@utility modal {
+  @apply max-md:bg-transparent! max-md:backdrop-blur-sm max-md:transition-[backdrop-filter];
+}
+
+.select.select-sm,
+.input.input-sm,
+.btn.btn-sm,
+.tabs.tabs-xs .tab {
+  @apply text-sm;
+}
